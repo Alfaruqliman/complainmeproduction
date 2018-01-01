@@ -26,7 +26,7 @@ class Complain(models.Model):
 
 class Govt_Agency_Access(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    agency = models.OneToOneField(Govt_Agency, default='normal')
+    agency = models.OneToOneField(Govt_Agency)
 
     def __str__(self):
         return "%s %s" % (self.user.username, self.agency)
